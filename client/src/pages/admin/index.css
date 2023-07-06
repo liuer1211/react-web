@@ -1,0 +1,66 @@
+
+.novel .no-fix{
+  height: 100vh;
+  width: 100vw;
+  background-color:#e1dad0;
+  position: fixed;
+  z-index:1;
+}
+.novel .no-abs{
+  height: 100vh;
+  background-color:#e1dad0;
+  position: absolute;
+  z-index:2;
+  padding: 60px 40px;
+  box-sizing: border-box;
+  font-size: 24px;
+  writing-mode: vertical-lr;
+  left: 0;
+  transition: all .5s;
+  scroll-behavior: smooth;
+  
+}
+.no-abs >p{
+  margin:0;
+  padding-right: 22px;
+  line-height: 26px;
+  letter-spacing:4px;
+  font-family: cursive;
+}
+.no-abs img{
+  position: absolute;
+  left:0;
+  bottom: 0;
+  z-index:3;
+  animation: imgshow 2s;
+  opacity: 0.1;
+  
+}
+.no-abs img.img1{
+  left: 0;
+}
+.no-abs img.img2{
+  left: 800px;
+}
+.novel .fix1{
+  position: fixed;
+  top: 0;
+  bottom:0;
+  left:0;
+  right: 0;
+  z-index:99;
+  box-shadow: inset 4px 4px 20px 20px #e7e7e7;
+}
+
+@keyframes imgshow {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 0.1;
+  }
+}
+  
+ 
+
+

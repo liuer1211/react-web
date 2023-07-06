@@ -1,26 +1,21 @@
 import {lazy,Suspense} from 'react';
-import {BrowserRouter, Switch, Route, Redirect} from "react-router-dom";
+import {HashRouter, Switch, Route, Redirect} from "react-router-dom";
 import routerList from "./router"
 import './App.css';
-
-const Login = lazy(()=> import('./pages/login'))
-const Admin = lazy(()=> import('./pages/admin'))
 
 function App() {
   return (
     <Suspense fallback={<h1></h1>}>
-      <BrowserRouter>
+      <HashRouter>
         <Switch>
-          {/* {
-            routerList.map(item=>{
-              <Route path={item.path} component={item.component}></Route>
+          {
+            routerList.map((item,index)=>{
+              return <Route key={index} path={item.path} component={item.component}></Route>
             })
-          } */}
-          <Route path="/login" component={Login}></Route>
-          <Route path='/' component={Admin}></Route>
+          }
           <Redirect to="/"/>
         </Switch>
-      </BrowserRouter>
+      </HashRouter>
     </Suspense>
   );
 }

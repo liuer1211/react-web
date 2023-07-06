@@ -1,8 +1,8 @@
- import './index.module.less'
+import './index.less'
 
 function Login() {
   return (
-    <div>
+    <div className='login'>
       Login
     </div>
   );
