@@ -1,5 +1,6 @@
 import React,{ useEffect } from "react"
 import './index.css'
+import Haibao from '../../asstes/images/fengmian/haibao.png'
 let timer = null;
 
 function Admin() {
@@ -32,12 +33,12 @@ function Admin() {
   }
 
   useEffect(()=>{
-    window.scrollTo({
-      top:0,
-      left:0,
-      behavior:'smooth'
-    })
-    initfun()
+    // window.scrollTo({
+    //   top:0,
+    //   left:0,
+    //   behavior:'smooth'
+    // })
+    // initfun()
   },[])
   
   return (
@@ -84,6 +85,14 @@ function Admin() {
       <div className="no-fix">
       </div>
       <div className="fix1">
+        <div className="msg one">
+          夜灵犀传奇
+          <span>之</span> 
+          <span>邪剑黑曜</span> 
+        </div>
+        <div className="msg two">
+          <img src={Haibao} alt="" />
+        </div>
       </div>
     </div>
   );

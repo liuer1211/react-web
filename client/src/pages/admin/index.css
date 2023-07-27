@@ -13,19 +13,24 @@
   z-index:2;
   padding: 60px 40px;
   box-sizing: border-box;
-  font-size: 24px;
+  font-size: 30px;
   writing-mode: vertical-lr;
   left: 0;
   transition: all .5s;
   scroll-behavior: smooth;
-  
 }
 .no-abs >p{
-  margin:0;
-  padding-right: 22px;
-  line-height: 26px;
-  letter-spacing:4px;
+  margin: 0;
+  padding-right: 34px;
+  line-height: 28px;
+  letter-spacing: 6px;
   font-family: cursive;
+}
+.no-abs >p:nth-child(n){
+  color: #2b2b2b;
+}
+.no-abs >p:nth-child(2n){
+  color: #2b2b2b;
 }
 .no-abs img{
   position: absolute;
@@ -49,7 +54,49 @@
   left:0;
   right: 0;
   z-index:99;
-  box-shadow: inset 4px 4px 20px 20px #e7e7e7;
+  background-color: #e7e7e7;
+  animation: fixHide 3s;
+  animation-delay: 8s;
+  animation-timing-function: cubic-bezier(0.45, 0.44, 0.45, 0.46);
+  animation-fill-mode: forwards;
+}
+.novel .fix1 .msg.one{
+  writing-mode: vertical-lr;
+  position: fixed;
+  right: 30px;
+  top: 30px;
+  font-family: cursive;
+  font-size: 50px;
+  opacity: 0;
+  animation: msgShowHide 8s;
+  animation-delay: .5s;
+  animation-timing-function: cubic-bezier(0.45, 0.44, 0.45, 0.46);
+  animation-fill-mode: forwards;
+}
+.novel .fix1 .msg >span:nth-child(1){
+  font-size: 20px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  padding: 2px;
+}
+.novel .fix1 .msg >span:nth-child(2){
+  font-size: 46px;
+  font-weight: 600;
+}
+
+.novel .fix1 .msg.two img{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -300px;
+  margin-left: -300px;
+  height: 600px;
+  width: 600px;
+  opacity: 0;
+  animation: msgShowHideImg 8s;
+  animation-delay: .5s;
+  animation-timing-function: cubic-bezier(0.45, 0.44, 0.45, 0.46);
+  animation-fill-mode: forwards;
 }
 
 @keyframes imgshow {
@@ -60,7 +107,93 @@
     opacity: 0.1;
   }
 }
-  
- 
 
+@keyframes fixHide {
+  0%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+  
+@keyframes msgShowHide {
+  0%{
+    opacity: 0;
+    transform: scale(.7);
+    right: 60px;
+    top: 60px;
+  }
+  10%{
+    opacity: 0.6;
+  }
+  20%{
+    opacity: 0.9;
+  }
+  30%{
+    opacity: 1;
+    transform: scale(1);
+    right: 30px;
+    top: 30px;
+  }
+  40%{
+    opacity: 1;
+  }
+  50%{
+    opacity: 1;
+  }
+  60%{
+    opacity: 1;
+  }
+  70%{
+    opacity: 1;
+  }
+  80%{
+    opacity: 1;
+  }
+  90%{
+    opacity: 0.5;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+  
+@keyframes msgShowHideImg {
+  0%{
+    opacity: 0;
+    transform: rotate(-30deg);
+  }
+  10%{
+    opacity: 0.1;
+  }
+  20%{
+    opacity: 0.3;
+    transform: rotate(0);
+  }
+  30%{
+    opacity: 0.5;
+  }
+  40%{
+    opacity: 1;
+  }
+  50%{
+    opacity: 1;
+  }
+  60%{
+    opacity: 1;
+  }
+  70%{
+    opacity: 1;
+  }
+  80%{
+    opacity: 1;
+  }
+  90%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
 
