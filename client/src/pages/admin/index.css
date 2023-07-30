@@ -70,8 +70,8 @@
 .novel .fix1 .msg.one{
   writing-mode: vertical-lr;
   position: fixed;
-  right: 30px;
-  top: 30px;
+  right: 60px;
+  top: 60px;
   font-family: cursive;
   font-size: 50px;
   opacity: 0;
@@ -91,19 +91,75 @@
   font-weight: 600;
 }
 
-.novel .fix1 .msg.two img{
+.novel .fix1 .msg.two >div{
+  /* background-color: antiquewhite; */
   position: fixed;
   top: 50%;
   left: 50%;
   margin-top: -300px;
-  margin-left: -300px;
+  margin-left: -500px;
   height: 600px;
-  width: 600px;
+  width: 1000px;
+}
+.novel .fix1 .msg.two >div img{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100px;
+  object-fit: cover;
   opacity: 0;
-  animation: msgShowHideImg 8s;
+}
+.novel .fix1 .msg.two >div img.top{
+  animation: msgShowHideImgTop 8s;
   animation-delay: .5s;
   animation-timing-function: cubic-bezier(0.45, 0.44, 0.45, 0.46);
   animation-fill-mode: forwards;
+}
+.novel .fix1 .msg.two >div img.bot{
+  animation: msgShowHideImgBot 8s;
+  animation-delay: .5s;
+  animation-timing-function: cubic-bezier(0.45, 0.44, 0.45, 0.46);
+  animation-fill-mode: forwards;
+}
+.novel .fix1 .msg.two >div img.img1{
+  left: 0;
+  top: 0;
+}
+.novel .fix1 .msg.two >div img.img2{
+  left: 101px;
+  top: 200px;
+}
+.novel .fix1 .msg.two >div img.img3{
+  left: 201px;
+  top: 0;
+}
+.novel .fix1 .msg.two >div img.img4{
+  left: 301px;
+  top: 200px;
+}
+.novel .fix1 .msg.two >div img.img5{
+  left: 401px;
+  top: 0;
+}
+.novel .fix1 .msg.two >div img.img6{
+  left: 501px;
+  top: 200px;
+}
+.novel .fix1 .msg.two >div img.img7{
+  left: 601px;
+  top: 0;
+}
+.novel .fix1 .msg.two >div img.img8{
+  left: 701px;
+  top: 200px;
+}
+.novel .fix1 .msg.two >div img.img9{
+  left: 801px;
+  top: 0;
+}
+.novel .fix1 .msg.two >div img.img10{
+  left: 901px;
+  top: 200px;
 }
 
 @keyframes imgshow {
@@ -128,20 +184,20 @@
   0%{
     opacity: 0;
     transform: scale(.7);
-    right: 60px;
-    top: 60px;
+    right: 90px;
+    top: 90px;
   }
   10%{
     opacity: 0.6;
   }
   20%{
-    opacity: 0.9;
+    opacity: 1;
+    transform: scale(1);
+    right: 60px;
+    top: 60px;
   }
   30%{
     opacity: 1;
-    transform: scale(1);
-    right: 30px;
-    top: 30px;
   }
   40%{
     opacity: 1;
@@ -166,41 +222,93 @@
   }
 }
   
-@keyframes msgShowHideImg {
+@keyframes msgShowHideImgTop {
   0%{
     opacity: 0;
-    transform: rotate(-30deg);
+    top: 0;
   }
   10%{
-    opacity: 0.1;
+    opacity: 0.5;
   }
   20%{
-    opacity: 0.3;
-    transform: rotate(0);
+    opacity: 1;
+    top: 80px;
   }
   30%{
-    opacity: 0.5;
+    opacity: 1;
+    top: 80px;
   }
   40%{
     opacity: 1;
+    top: 80px;
   }
   50%{
     opacity: 1;
+    top: 80px;
   }
   60%{
     opacity: 1;
+    top: 80px;
   }
   70%{
     opacity: 1;
+    top: 80px;
   }
   80%{
     opacity: 1;
+    top: 80px;
   }
   90%{
-    opacity: 1;
+    opacity: 0.5;
+    top: 80px;
   }
   100%{
     opacity: 0;
+    top: 80px;
   }
 }
-
+@keyframes msgShowHideImgBot {
+  0%{
+    opacity: 0;
+    top: 200px;
+  }
+  10%{
+    opacity: 0.5;
+  }
+  20%{
+    opacity: 1;
+    top: 120px;
+  }
+  30%{
+    opacity: 1;
+    top: 120px;
+  }
+  40%{
+    opacity: 1;
+    top: 120px;
+  }
+  50%{
+    opacity: 1;
+    top: 120px;
+  }
+  60%{
+    opacity: 1;
+    top: 120px;
+  }
+  70%{
+    opacity: 1;
+    top: 120px;
+  }
+  80%{
+    opacity: 1;
+    top: 120px;
+  }
+  90%{
+    opacity: 0.5;
+    top: 120px;
+  }
+  100%{
+    opacity: 0;
+    top: 120px;
+  }
+}
