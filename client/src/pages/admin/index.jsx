@@ -1,9 +1,11 @@
-import React,{ useEffect } from "react"
+import React,{ useEffect, useRef } from "react"
 import './index.css'
 import Haibao from '../../asstes/images/fengmian/haibao.png'
 let timer = null;
 
 function Admin() {
+
+  const idText = useRef()
 
   // 移动
   function moveNode(wnode){
@@ -25,25 +27,52 @@ function Admin() {
     }
   }
 
+  // 初始移动
   const initfun = ()=>{
     let w = document.getElementById('sb').offsetlidth - document.documentElement.offsetwidth
     timer = setInterval(()=>{
       moveNode(w)
-    },10000)
+    },30000)
+  }
+
+  // 文字显示
+  const sleepFun = (times)=> {
+    let time = times || 0;
+    time = Math.ceil(time/4) * 1000;
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        resolve(time);
+      }, time);
+    })
+  }
+
+  // 初始文字显隐
+  const getText = async () =>{
+    const p = document.querySelectorAll('#sb p')
+    for(let i=0;i<p.length;i++){
+      // console.log( p[i].innerHTML.length)
+      p[i].className = 'bold'
+      const logStr = await sleepFun(p[i].innerHTML.length)
+    }
   }
 
   useEffect(()=>{
-    // window.scrollTo({
-    //   top:0,
-    //   left:0,
-    //   behavior:'smooth'
-    // })
-    // initfun()
+    window.scrollTo({
+      top:0,
+      left:0,
+      behavior:'smooth'
+    })
+    setTimeout(()=>{
+      initfun()
+    },20000)
+    setTimeout(()=>{
+      getText()
+    },8000)
   },[])
   
   return (
     <div className='novel'>
-      <div id='sb' className="no-abs" >
+      <div id='sb' ref={idText} className="no-abs" >
         <p>
           后来查了一下，发现原来是
         </p>
@@ -64,6 +93,21 @@ function Admin() {
         </p>
         <p>
           后来查了一下，发现原来是
+        </p>
+        <p>
+          后来查了一下，发现原来是后来查了一下，发现原来是后来查了一下，发现原来是后来查了一下，发现原来是
+        </p>
+        <p>
+          后来查了一下，发现原来是
+        </p>
+        <p>
+          后来查了一下，发现原来是后来查了一下，发现原来是后来查了一下，发现原来是后来查了一下，发现原来是
+        </p>
+        <p>
+          后来查了一下，发现原来是
+        </p>
+        <p>
+          后来查了一下，发现原来是后来查了一下，发现原来是后来查了一下，发现原来是后来查了一下，发现原来是
         </p>
         <p>
           后来查了一下，发现原来是后来查了一下，发现原来是后来查了一下，发现原来是后来查了一下，发现原来是
