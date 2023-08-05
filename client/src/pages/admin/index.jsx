@@ -61,9 +61,10 @@ function Admin() {
   const getText = async () =>{
     const p = document.querySelectorAll('#sb p')
     for(let i=0;i<p.length;i++){
-      // console.log( p[i].innerHTML.length)
+      // console.log( p[i].textContent)
+      // console.log( p[i].innerHTML)
       p[i].className = 'bold'
-      const logStr = await sleepFun(p[i].innerHTML.length)
+      const logStr = await sleepFun(p[i].textContent.length)
     }
   }
 
@@ -86,6 +87,7 @@ function Admin() {
       <div id='sb' ref={idText} className="no-abs" >
         <p>
           后来查了一下，发现原来是
+          <img src="" alt="" />
         </p>
         <p>
           后来查了一下，发现原来是后来查了一下，发现原来是后来查了一下，发现原来是后来查了一下，发现原来是

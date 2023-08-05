@@ -1,9 +1,9 @@
 import './index.less'
-
+import Img1 from '../../asstes/images/address/chalou.png'
 function Login() {
   return (
     <div className='login'>
-      Login
+      <img src={Img1} alt="" />
     </div>
   );
 }
