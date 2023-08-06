@@ -13,7 +13,7 @@
   z-index:2;
   padding: 60px 20px;
   box-sizing: border-box;
-  font-size: 30px;
+  font-size: 26px;
   writing-mode: vertical-lr;
   left: 0;
   transition: all .5s;
@@ -22,12 +22,13 @@
 .no-abs >p{
   margin: 0;
   padding-right: 34px;
-  line-height: 30px;
+  line-height: 38px;
   letter-spacing: 8px;
   font-family: cursive;
   color: #8b8b8b;
   opacity: 0;
   transition: .8s;
+  position: relative;
 }
 .no-abs >p.bold{
   color: #000;
