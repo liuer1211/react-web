@@ -6,8 +6,12 @@ const routerList = [
     component: lazy(()=> import('../pages/login'))
   },
   {
-    path: "/",
+    path: "/admin",
     component: lazy(()=> import('../pages/admin'))
+  },
+  {
+    path: "/",
+    component: lazy(()=> import('../pages/active'))
   }
 ]
 
