@@ -19,11 +19,17 @@
     <audio id="audio" src="txdy.mp3" controls style="display: none;"> </audio>
     <script>
       function getAudio(){
-      document.getElementById("audio").play();
+        document.getElementById("audio").play();
       }
       setTimeout(()=>{
         getAudio();
       },500)
     </script>
+    <style>
+      body {  
+        background-color: #ffffff; /* 白色背景 */  
+        filter: grayscale(100%); /* 灰度效果 */  
+      }
+    </style>
   </body>
 </html>

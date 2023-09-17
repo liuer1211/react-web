@@ -3,11 +3,11 @@ body{
   padding: 0;
 }
 
-/* html{
+html{
   filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);
   -webkit-filter:grayscale(100%);
   -moz-filter:grayscale(100%);
   -ms-filter:grayscale(100%);
   -o-filter:grayscale(100%);
   filter:grayscale(100%);
-} */
+}

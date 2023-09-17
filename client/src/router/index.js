@@ -11,7 +11,7 @@ const routerList = [
   },
   {
     path: "/",
-    component: lazy(()=> import('../pages/active'))
+    component: lazy(()=> import('../pages/login'))
   }
 ]
 
